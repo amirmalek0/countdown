@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap');
-*{
-    font-family: Goldman,sans-serif;
+
+* {
+    font-family: Goldman, sans-serif;
 
 }
-body{
-    background-color: antiquewhite;
+
+body {
+    background-image: url("../img/andromeda.jpg");
+    background-size: cover;
 }
-label , input{
+
+label, input {
     display: inline-block;
 }
+
 button {
     display: block;
 }
