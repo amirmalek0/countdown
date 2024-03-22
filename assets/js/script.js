@@ -1,7 +1,7 @@
 function count() {
     let startingHours = document.getElementById('countdownHour').valueAsNumber;
     let startingMinutes = document.getElementById('countdownMin').valueAsNumber;
-    let startingSeconds = document.getElementById(('countdownSec')).valueAsNumber;
+    let startingSeconds = document.getElementById('countdownSec').valueAsNumber;
     if (!startingHours || startingHours < 0) {
         startingHours = 0;
     }
@@ -12,11 +12,15 @@ function count() {
         startingSeconds = 0;
     }
     globalThis.time = (startingHours * 60 * 60) + (startingMinutes * 60) + startingSeconds;
-    globalThis.countdownEl = document.getElementById("timer");
     setInterval(timer, 1000);
+
 }
 
 function timer() {
+    let hourDiv = document.getElementById("hour");
+    let minDiv = document.getElementById("min");
+    let secDiv = document.getElementById("sec");
+
     let hour = Math.floor(time / 3600);
     let minute = Math.floor((time % 3600) / 60);
     let second = (time % 3600) % 60;
@@ -24,9 +28,17 @@ function timer() {
         second = "" + second + second;
     }
     if (hour === 0 && minute === 0 && second === '00') {
-        countdownEl.innerHTML = `${minute}:${second}`;
+        hourDiv.innerHTML = hour;
+        minDiv.innerHTML = minute;
+        secDiv.innerHTML = second;
         return;
     }
-    countdownEl.innerHTML = `${hour}:${minute}:${second}`;
+    console.log(hourDiv)
+    hourDiv.innerHTML = hour;
+    minDiv.innerHTML = minute;
+    secDiv.innerHTML = second;
+    document.getElementById('timer').style.display='block';
+    document.getElementById('counter-inputs').style.display='none';
+
     time--;
 }

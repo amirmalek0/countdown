@@ -8,16 +8,22 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
-<form>
+<div id="counter-inputs">
     <label for="countdownHour">Hours</label>
     <input id="countdownHour" min="0" type="number">
     <label for="countdownMin">Minutes</label>
     <input id="countdownMin" min="0" type="number">
     <label for="countdownSec">Seconds</label>
     <input id="countdownSec" min="0" type="number">
-    <button onclick="count()">Count</button>
-</form>
-<i id="timer"></i>
+    <button class="count" onclick="count()">Count</button>
+</div>
+<div id="timer">
+    <div class="hour" id="hour"></div>
+    <span class="colon">:</span>
+    <div class="min" id="min"></div>
+    <span class="colon">:</span>
+    <div class="sec" id="sec"></div>
+</div>
 <script src="assets/js/script.js"></script>
 </body>
 </html>

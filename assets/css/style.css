@@ -2,12 +2,29 @@
 
 * {
     font-family: Goldman, sans-serif;
-
 }
 
 body {
+    color: white;
+    text-align: -moz-center;
+    text-align: -webkit-center;
     background-image: url("../img/andromeda.jpg");
     background-size: cover;
+}
+
+input {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+    border: white;
+    border-radius: 20%;
+    outline: none;
+    font-size: 2rem;
+    text-align: center;
+}
+
+label {
+    font-size: 2rem;
 }
 
 label, input {
@@ -16,4 +33,46 @@ label, input {
 
 button {
     display: block;
+}
+
+.hour,.min,.sec{
+    display: inline-block;
+    font-size: 10rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10%;
+}
+.colon {
+    font-size: 10rem;
+}
+#timer {
+    display: none;
+}
+
+.count{
+    width: 20%;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    background-color: darkslateblue;
+    margin-top: 1rem;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+}
+.count:hover{
+    background-color: mediumslateblue;
+
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
