@@ -24,43 +24,85 @@ input {
 }
 
 label {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 label, input {
     display: inline-block;
 }
 
-button {
-    display: block;
+input:focus {
+    background-color: darkgray;
 }
 
-.hour,.min,.sec{
+button {
+    display: block;
+    font-size: 3rem;
+}
+
+#counter-inputs {
+    padding-top: 14rem;
+}
+
+.hour, .min, .sec {
     display: inline-block;
     font-size: 10rem;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
     border-radius: 10%;
 }
+
 .colon {
     font-size: 10rem;
 }
+
 #timer {
     display: none;
 }
 
-.count{
+.count {
     width: 20%;
     border-radius: 1rem;
     border: none;
     outline: none;
     background-color: darkslateblue;
-    margin-top: 1rem;
+    margin-top: 3rem;
     padding: 1rem;
     color: white;
     cursor: pointer;
 }
-.count:hover{
+
+.pause, .resume, .startOver {
+    width: 20%;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+}
+.pause{
+    background-color: #ecbc1e;
+}
+.pause:focus{
+    background-color: #d0a51a;
+}
+.resume {
+    background-color: #36ab22;
+}
+.resume:focus{
+    background-color: #277919;
+}
+.startOver{
+    background-color: #d73232;
+}
+.startOver:focus{
+    background-color: #c42f2f;
+}
+
+
+.count:hover {
     background-color: mediumslateblue;
 
 }
