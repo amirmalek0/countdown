@@ -41,7 +41,7 @@ button {
 }
 
 #counter-inputs {
-    padding-top: 14rem;
+    padding-top: 11rem;
 }
 
 .hour, .min, .sec {
@@ -73,7 +73,7 @@ button {
 }
 
 .pause, .resume, .startOver {
-    width: 20%;
+    width: 30%;
     border-radius: 1rem;
     border: none;
     outline: none;
@@ -82,22 +82,28 @@ button {
     color: white;
     cursor: pointer;
 }
-.pause{
+
+.pause {
     background-color: #ecbc1e;
 }
-.pause:focus{
+
+.pause:focus {
     background-color: #d0a51a;
 }
+
 .resume {
     background-color: #36ab22;
 }
-.resume:focus{
+
+.resume:focus {
     background-color: #277919;
 }
-.startOver{
+
+.startOver {
     background-color: #d73232;
 }
-.startOver:focus{
+
+.startOver:focus {
     background-color: #c42f2f;
 }
 
@@ -118,3 +124,33 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance: textfield;
 }
+
+@media (max-width: 1024px) {
+    label, input {
+        display: block;
+        width: 50%;
+        border-radius: 2rem;
+    }
+
+    .count {
+        width: 100%
+    }
+
+    #counter-inputs {
+        padding-top: 2rem;
+    }
+
+    .pause, .resume, .startOver {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hour, .min, .sec, .colon {
+        font-size: 3rem;
+    }
+    .pause, .resume, .startOver {
+    font-size: 2rem;
+    }
+    }
+
